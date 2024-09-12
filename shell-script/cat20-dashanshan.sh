@@ -26,7 +26,7 @@ install_env_and_full_node() {
     sudo n stable
     sudo npm i -g yarn
 
-    git clone https://github.com/CATProtocol/cat-token-box
+    git clone https://github.com/xiangzeng/cat-token-box
     cd cat-token-box
     sudo yarn install
     sudo yarn build
