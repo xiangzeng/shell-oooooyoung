@@ -35,8 +35,8 @@ do
         ((FAIL_COUNT++))
     fi
     
-    echo "等待 20 秒..."
-    sleep 20
+    echo "等待 30 秒..."
+    sleep 30
 done
 
 echo "转账任务完成，共执行 $EXECUTION_COUNT 次"
