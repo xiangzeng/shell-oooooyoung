@@ -29,4 +29,4 @@ do
     sleep 120  # 暂停 5 秒，您可以根据需要调整这个值
 done
 
-echo "转账任务完成，共执行 $EXECUTION_COUNT 次"我需要统计成功次数和失败次数
+echo "转账任务完成，共执行 $EXECUTION_COUNT 次"
