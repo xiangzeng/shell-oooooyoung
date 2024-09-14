@@ -26,7 +26,7 @@ do
     yarn cli send -i "$TOKEN_ID" "$RECEIVER_ADDRESS" "$AMOUNT"
     
     # 可选：在每次执行之间添加延迟，以避免可能的速率限制
-    sleep 60  # 暂停 5 秒，您可以根据需要调整这个值
+    sleep 120  # 暂停 5 秒，您可以根据需要调整这个值
 done
 
 echo "转账任务完成，共执行 $EXECUTION_COUNT 次"我需要统计成功次数和失败次数
