@@ -19,26 +19,14 @@ if [ "$CONFIRM" != "y" ]; then
     exit 1
 fi
 
-# 初始化计数器
-SUCCESS_COUNT=0
-FAIL_COUNT=0
-
 # 循环执行命令
 for ((i=1; i<=$EXECUTION_COUNT; i++))
 do
     echo "执行第 $i 次转账"
-    if yarn cli send -i "$TOKEN_ID" "$RECEIVER_ADDRESS" "$AMOUNT"; then
-        echo "转账成功"
-        ((SUCCESS_COUNT++))
-    else
-        echo "转账失败"
-        ((FAIL_COUNT++))
-    fi
+    yarn cli send -i "$TOKEN_ID" "$RECEIVER_ADDRESS" "$AMOUNT"
     
-    echo "等待 30 秒..."
-    sleep 30
+    # 可选：在每次执行之间添加延迟，以避免可能的速率限制
+    sleep 60  # 暂停 5 秒，您可以根据需要调整这个值
 done
 
-echo "转账任务完成，共执行 $EXECUTION_COUNT 次"
-echo "成功次数: $SUCCESS_COUNT"
-echo "失败次数: $FAIL_COUNT"
+echo "转账任务完成，共执行 $EXECUTION_COUNT 次"我需要统计成功次数和失败次数
